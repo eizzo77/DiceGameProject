@@ -1,5 +1,10 @@
 .player {
+  color: snow;
+  font-size: xxx-large;
+  display: flex;
   text-align: center;
   height: 100%;
   width: 50%;
+  flex-direction: column;
+  justify-content: space-evenly;
 }

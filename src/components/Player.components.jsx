@@ -4,7 +4,7 @@ import "./Player.components.css";
 
 class Player extends react.Component {
     render()
-    {  {console.log(this.props.points)}
+    {  
         return <div className="player">
             <div className="player-name">
             {this.props.name}
@@ -13,7 +13,7 @@ class Player extends react.Component {
             {this.props.points}
             </div>
             <div>
-            <PlayerScore text="Current" score={this.props.score}></PlayerScore>
+            <PlayerScore text="Score" score={this.props.score}></PlayerScore>
             </div>
         </div>
     }

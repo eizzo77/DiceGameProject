@@ -1,7 +1,9 @@
 import react from "react";
 
 class FinalScoreInput extends react.Component {
-    state = {finalScore: 100};
+    state = {
+        finalScore: 100,
+    };
 
     componentDidUpdate = () => {
         this.props.onWinning(this.state.finalScore);
@@ -9,7 +11,8 @@ class FinalScoreInput extends react.Component {
 
     render() {
         return <div>
-            <input type="text" placeHolder={this.props.holder} defaultValue={this.state.finalScore} onBlur={(e) => this.setState({finalScore:e.target.value})}></input>
+            <input type="number" min={this.props.minScore + 1} placeholder={this.props.holder} defaultValue={this.state.finalScore} 
+            onBlur={(e) => e.target.min <= e.target.value && this.setState({finalScore:e.target.value})}></input>
         </div>
     }
 }
